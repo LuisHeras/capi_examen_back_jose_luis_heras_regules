@@ -9,4 +9,5 @@ class UsuarioDomicilio extends Model
 {
     use HasFactory;
     protected $table = 'user_domicilio';
+
 }

@@ -20,4 +20,4 @@ Route::get('/', function () {
 });
 
 
-Route::get('/getusuarios', 'App\Http\Controllers\UsuarioDomicilioController@getUsuarioDomicilio')->name('get-usuarios');
+Route::get('/getusuarios', 'App\Http\Controllers\UserController@getUsuarioDomicilio')->name('get-usuarios');
