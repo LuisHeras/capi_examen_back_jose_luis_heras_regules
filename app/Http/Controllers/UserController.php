@@ -9,11 +9,11 @@ use App\Models\User;
 class UserController extends Controller
 {
     public function getUsuarioDomicilio(){
-        $usuarios = User::all();
+        $data = User::with('domicilio')->get();
         $fecha_actual = Carbon::now();
-        foreach($usuarios as $user){
+        foreach($data as $user){
             $user->edad = $fecha_actual->diff($user->fecha_nacimiento)->y;
         }
-        return $usuarios;
+       return array('data' => $data/* , 'headers' => getallheaders() */);
     }
 }
